@@ -1,3 +1,4 @@
+import javafx.scene.chart.ScatterChart;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent; //**Need to import
 import javafx.event.EventHandler; //**Need to import
@@ -28,19 +29,22 @@ public class HomePage extends BorderPane
     private VBox bodyLayout;
     private HBox buttonBox;
 
-    public HomePage() throws IOException
+    public HomePage() //throws IOException
     {
         //intitialize the app header
         appTitle = new Label("SunDevil Pizza");
+
         //create header image
-        InputStream stream = new FileInputStream("INSERT FILE NAME HERE");
-        logoIMG = new Image(stream);
-        logoView = new ImageView();
-        logoView.setImage(logoIMG);
-        logoView.setPreserveRatio(true);
+
+       // InputStream stream = new FileInputStream("pizzaSlice.png");
+        //logoIMG = new Image(stream);
+        //logoView = new ImageView();
+        //logoView.setImage(logoIMG);
+        //logoView.setPreserveRatio(true);
         //place label and image into header
+
         headerBox = new HBox();
-        headerBox.getChildren().addAll(logoView, appTitle);
+        headerBox.getChildren().addAll(appTitle);
         //set color
         //headerBox.setBackground(new Background(new BackgroundFill(Color.RED))); //come back to this
         this.setTop(headerBox);
@@ -55,5 +59,7 @@ public class HomePage extends BorderPane
         //put nodes in the layout
         buttonBox.getChildren().addAll(employeeButton, studentButton);
         bodyLayout.getChildren().addAll(pageTitle, buttonBox);
+        this.setCenter(bodyLayout);
     }
+
 }

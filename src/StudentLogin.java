@@ -37,12 +37,16 @@ public class StudentLogin extends BorderPane
     {
         //intitialize the app header
         appTitle = new Label("SunDevil Pizza");
+
+
         //create header image
-        InputStream stream = new FileInputStream("INSERT FILE NAME HERE");
-        logoIMG = new Image(stream);
-        logoView = new ImageView();
-        logoView.setImage(logoIMG);
-        logoView.setPreserveRatio(true);
+        //InputStream stream = new FileInputStream("INSERT FILE NAME HERE");
+        //logoIMG = new Image(stream);
+        //logoView = new ImageView();
+        //logoView.setImage(logoIMG);
+        //logoView.setPreserveRatio(true);
+
+
         //place label and image into header
         headerBox = new HBox();
         headerBox.getChildren().addAll(logoView, appTitle);
@@ -66,6 +70,7 @@ public class StudentLogin extends BorderPane
         inputBox.getChildren().addAll(idInputField, loginButton, choiceLabel, newOrderButton);
         loginBox.getChildren().addAll(idLabel, inputBox);
         bodyLayout.getChildren().addAll(pageTitle, loginBox);
+        this.setCenter(bodyLayout);
     }
 
 }

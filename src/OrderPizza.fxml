@@ -19,7 +19,7 @@
          <children>
             <ImageView fitHeight="63.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../Downloads/pizzaIcon.png" />
+                  <Image url="@/resources/pizzaSlice.png" />
                </image>
             </ImageView>
             <Label text="SunDevil Pizza" textFill="WHITE">

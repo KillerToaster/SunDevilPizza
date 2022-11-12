@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="073015da-8f2c-40ce-b210-7ed10ded8dee" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EmployeeLogin.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/HomePage.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OrderPizza.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/pizzaSlice.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EmployeeLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EmployeeLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EmployeeOrderStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EmployeeOrderStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HomePage.java" afterDir="false" />
+    <list default="true" id="073015da-8f2c-40ce-b210-7ed10ded8dee" name="Changes" comment="added fxml files">
+      <change afterPath="$PROJECT_DIR$/src/SceneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EmployeeLogin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/EmployeeLogin.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OrderPizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrderPizza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StudentLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StudentLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StudentOrderStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StudentOrderStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OrderPizza.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrderPizza.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StudentLogin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/StudentLogin.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -63,6 +63,21 @@
       <option name="presentableId" value="Default" />
       <updated>1668287234857</updated>
     </task>
+    <task id="LOCAL-00001" summary="added fxml files">
+      <created>1668293061280</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668293061280</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added fxml files">
+      <created>1668293129077</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668293129077</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -76,5 +91,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added fxml files" />
+    <option name="LAST_COMMIT_MESSAGE" value="added fxml files" />
   </component>
 </project>

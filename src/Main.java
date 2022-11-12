@@ -1,36 +1,23 @@
-
+import java.io.IOException;
 import javafx.application.Application;
-import javafx.scene.input.MouseEvent;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.scene.* ;
-import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
-import javafx.geometry.* ; // Point2D
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 
 public class Main extends Application
 {
-    //declare all scenes
-    private EmployeeLogin employeeLogin;
-    private HomePage homePage;
-    private EmployeeOrderStatus employeeOrderStatus;
-    private OrderPizza orderPizza;
-    private StudentLogin studentLogin;
-    private StudentOrderStatus studentorderStatus;
 
-
-    public void start(Stage stage)
+    public void start(Stage stage) throws IOException
     {
-        StackPane root = new StackPane();
-        homePage = new HomePage();
-        root.getChildren().add(employeeLogin);
-
-        Scene scene = new Scene(root, 700, 700);
+        Parent root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
+        stage.setTitle("SunDevil Pizza");
+        stage.setScene(new Scene(root, 700, 500));
         stage.setResizable(false);
-        stage.setTitle("SunDevilPizza");
-        stage.setScene(scene);
         stage.show();
     }
 

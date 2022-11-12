@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 public class Main extends Application
 {
 
-    public void start(Stage stage) throws IOException
+    public void start(Stage stage) throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
         stage.setTitle("SunDevil Pizza");

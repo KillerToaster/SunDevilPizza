@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="073015da-8f2c-40ce-b210-7ed10ded8dee" name="Changes" comment="added fxml files">
-      <change afterPath="$PROJECT_DIR$/src/SceneController.java" afterDir="false" />
+    <list default="true" id="073015da-8f2c-40ce-b210-7ed10ded8dee" name="Changes" comment="4:00 pm 11/12/22">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EmployeeLogin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/EmployeeLogin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HomePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/HomePage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OrderPizza.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrderPizza.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StudentLogin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/StudentLogin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SceneController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +31,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\KillerToaster\Documents\SunDevilPizza\src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\KillerToaster\Documents\SunDevilPizza\src" />
       <recent name="C:\Users\KillerToaster\Documents\SunDevilPizza\src\resources" />
@@ -77,7 +79,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668293129077</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="4:00 pm 11/12/22">
+      <created>1668293976606</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668293976606</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -94,6 +103,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added fxml files" />
-    <option name="LAST_COMMIT_MESSAGE" value="added fxml files" />
+    <MESSAGE value="4:00 pm 11/12/22" />
+    <option name="LAST_COMMIT_MESSAGE" value="4:00 pm 11/12/22" />
   </component>
 </project>

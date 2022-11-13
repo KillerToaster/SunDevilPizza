@@ -171,11 +171,19 @@ public class SceneController
     public void handleOrderSubmit() throws Exception
     {
         //if the student id is not valid change the textfield red and change the prompt
+        String ASURITE = poASURITE.getText();
 
-        //else change the scene and put the order in the order database
-        Parent root = FXMLLoader.load(getClass().getResource("OrderSuccessful.fxml"));
-        Stage newStage = (Stage) (poSubmitButton.getScene().getWindow());
-        newStage.setScene(new Scene(root, 700, 500));
+        if (ASURITE.length() == 10)
+        {
+            Parent root = FXMLLoader.load(getClass().getResource("OrderSuccessful.fxml"));
+            Stage newStage = (Stage) (poSubmitButton.getScene().getWindow());
+            newStage.setScene(new Scene(root, 700, 500));
+        } else
+        {
+            poASURITE.setStyle("-fx-text-box-border: #ff0000; -fx-focus-color: #ff0000;");
+            poASURITE.setText("");
+            poASURITE.setPromptText("PLEASE ENTER A VALID ID");
+        }
     }
 
     //==============================

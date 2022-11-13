@@ -1,5 +1,7 @@
-//all event handling goes here
 
+
+
+//clean up these import statements
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -52,6 +54,14 @@ public class SceneController
     //OrderSuccessful
     @FXML
     Button ossReturnButton;
+
+    //OrderProcessingAgentView nodes
+    VBox orderBox;
+    Button readyToCookButton, deleteButton;
+
+    //ChefView nodes
+    VBox chefOrderBox;
+    Button cookingButton, readyButton;
 
     //=======================
     //Handle HomePage actions
@@ -124,6 +134,7 @@ public class SceneController
     }
 
     //this method checks the validity of an order and submits it to the system accordingly
+    //must update other scenes and database
     public void handleOrderSubmit() throws Exception
     {
         //if the student id is not valid change the textfield red and change the prompt
@@ -159,6 +170,21 @@ public class SceneController
 
     //the GUI should populate using check boxes
     //when the box is checked, the order can be changed using buttons
+    //VBox for orders is called orderBox
+
+    //this button changes the selected orders' status from accepted to ready to cook
+    public void handleOrderProcess()
+    {
+
+    }
+
+    //this button can delete an order from the system at any time.
+    //only the OrderProcessingAgent can delete orders
+    //only way to remove an order from the system
+    public void handleOrderDelete()
+    {
+
+    }
 
 
     //=======================================
@@ -174,5 +200,19 @@ public class SceneController
 
     //the GUI should populate using check boxes
     //when the box is checked, the order can be changed using buttons
+    //VBox is called chefOrderBox
+
+    //this button turns the selected orders from ready to cook into cooking
+    public void handleCooking()
+    {
+
+    }
+
+    //this button changes the selected orders from cooking to ready
+    public void handleReady()
+    {
+
+    }
+
 
 }

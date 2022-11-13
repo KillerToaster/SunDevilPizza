@@ -101,7 +101,7 @@ public class SceneController
     //this method sends the student to a new order form
     public void handleNewOrder() throws Exception
     {
-        Parent root = FXMLLoader.load(getClass().getResource("OrderPizza.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("OrderPizza.fxml")); //not working... idk why
         Stage newStage = (Stage) (sNewOrderButton.getScene().getWindow());
         newStage.setScene(new Scene(root, 700, 500));
     }

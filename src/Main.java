@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
@@ -18,6 +19,7 @@ public class Main extends Application
         stage.setTitle("SunDevil Pizza");
         stage.setScene(new Scene(root, 700, 500));
         stage.setResizable(false);
+        stage.getIcons().add(new Image(Main.class.getResourceAsStream("/resources/pizzaSlice.png")));
         stage.show();
     }
 

@@ -31,9 +31,14 @@ public class SceneController
 
     @FXML
     Button hpEmployeeButton, hpStudentButton;
+    TextField employeeIDField;
+    Button employeeLoginButton;
 
+    //=======================
     //Handle HomePage actions
+    //=======================
 
+    //When the user clicks "employee" go to EmployeeLogin
     public void hpEmployeeHandler() throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("EmployeeLogin.fxml"));
@@ -42,6 +47,7 @@ public class SceneController
         newStage.setScene(new Scene(root, 700, 500));
     }
 
+    //when the user clicks "student" go to StudentLogin
     public void hpStudentHandler() throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("StudentLogin.fxml"));
@@ -49,5 +55,28 @@ public class SceneController
         Stage newStage = (Stage) (hpStudentButton.getScene().getWindow());
         newStage.setScene(new Scene(root, 700, 500));
     }
+
+    //============================
+    //Handle EmployeeLogin actions
+    //============================
+
+
+
+    public void handleEmployeeLogin() throws Exception
+    {
+        //if id from employeeIDField is valid login
+        //else outline employeeIDField in red and change prompt text to "PLEASE ENTER A VALID ID"
+        //there are two employee types. log them in accordingly
+        return;
+    }
+
+    //============================
+    //Handle StudentLogin actions
+    //============================
+
+
+    //============================
+    //Handle PizzaOrder actions
+    //============================
 
 }

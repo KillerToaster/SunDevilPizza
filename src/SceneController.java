@@ -196,7 +196,6 @@ public class SceneController
         int value;
 
         if(string == null || string.equals("")) {
-            System.out.println("String is null or empty.");
             return false;
         }
 
@@ -204,7 +203,7 @@ public class SceneController
             value = Integer.parseInt(string);
             return true;
         } catch (NumberFormatException e) {
-            System.out.println("String is not numeric");
+
         }
         return false;
     }

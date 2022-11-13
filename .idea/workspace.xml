@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="073015da-8f2c-40ce-b210-7ed10ded8dee" name="Changes" comment="added empty structures">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SunDevilPizza/EmployeeLogin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SunDevilPizza/HomePage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SunDevilPizza/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SunDevilPizza/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SunDevilPizza/OrderPizza.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SunDevilPizza/OrderPizza.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SunDevilPizza/SceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SunDevilPizza/SceneController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SunDevilPizza/StudentLogin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SceneController.java" afterDir="false" />
-    </list>
+    <list default="true" id="073015da-8f2c-40ce-b210-7ed10ded8dee" name="Changes" comment="added empty structures" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -165,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668307664812</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="4:34 pm 11/12/22">
+      <created>1668378069634</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1668378069634</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -178,18 +175,17 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added fxml files" />
     <MESSAGE value="4:00 pm 11/12/22" />
-    <MESSAGE value="4:34 pm 11/12/22" />
     <MESSAGE value="6:07 pm 11/12/22" />
     <MESSAGE value="6:19 pm 11/12/22" />
     <MESSAGE value="6:35 pm 11/12/22" />
     <MESSAGE value="6:46 pm 11/12/22" />
     <MESSAGE value="added notes" />
     <MESSAGE value="added empty structures" />
-    <option name="LAST_COMMIT_MESSAGE" value="added empty structures" />
+    <MESSAGE value="4:34 pm 11/12/22" />
+    <option name="LAST_COMMIT_MESSAGE" value="4:34 pm 11/12/22" />
   </component>
 </project>

@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SceneController">
    <top>
       <HBox prefHeight="63.0" prefWidth="600.0" style="-fx-background-color: DARKRED;" BorderPane.alignment="CENTER">
          <children>
@@ -43,7 +43,7 @@
                   <HBox prefHeight="39.0" prefWidth="459.0">
                      <children>
                         <Label text="ASURITE ID:" />
-                        <TextField prefHeight="25.0" prefWidth="225.0" promptText="PLEASE ENTER 10 DIGIT ID">
+                        <TextField fx:id="poASURITE" prefHeight="25.0" prefWidth="225.0" promptText="PLEASE ENTER 10 DIGIT ID">
                            <HBox.margin>
                               <Insets left="15.0" />
                            </HBox.margin>
@@ -58,13 +58,13 @@
                         <Label text="Pizza Type:" />
                         <VBox prefHeight="200.0" prefWidth="100.0">
                            <children>
-                              <RadioButton mnemonicParsing="false" text="Cheese" />
-                              <RadioButton mnemonicParsing="false" text="Pepperoni">
+                              <RadioButton fx:id="cheeseButton" mnemonicParsing="false" onAction="#handlePizzaType" text="Cheese" />
+                              <RadioButton fx:id="pepperoniButton" mnemonicParsing="false" onAction="#handlePizzaType" text="Pepperoni">
                                  <VBox.margin>
                                     <Insets />
                                  </VBox.margin>
                               </RadioButton>
-                              <RadioButton mnemonicParsing="false" text="Vegetable" />
+                              <RadioButton fx:id="veggieButton" mnemonicParsing="false" onAction="#handlePizzaType" text="Vegetable" />
                            </children>
                            <HBox.margin>
                               <Insets left="45.0" />
@@ -84,11 +84,11 @@
                         </Label>
                         <VBox prefHeight="200.0" prefWidth="100.0">
                            <children>
-                              <CheckBox mnemonicParsing="false" text="Mushroom" />
-                              <CheckBox mnemonicParsing="false" text="Olive" />
-                              <CheckBox mnemonicParsing="false" text="Onion" />
-                              <CheckBox mnemonicParsing="false" text="Extra Cheese" />
-                              <Button mnemonicParsing="false" prefHeight="52.0" prefWidth="71.0" style="-fx-background-color: DARKRED;" text="SUMBIT" textFill="WHITE">
+                              <CheckBox fx:id="mushroomButton" mnemonicParsing="false" onAction="#handlePizzaToppings" text="Mushroom" />
+                              <CheckBox fx:id="oliveButton" mnemonicParsing="false" onAction="#handlePizzaToppings" text="Olives" />
+                              <CheckBox fx:id="onionButton" mnemonicParsing="false" onAction="#handlePizzaToppings" text="Onion" />
+                              <CheckBox fx:id="extraCheeseButton" mnemonicParsing="false" onAction="#handlePizzaToppings" text="Extra Cheese" />
+                              <Button fx:id="poSubmitButton" mnemonicParsing="false" onAction="#handleOrderSubmit" prefHeight="52.0" prefWidth="71.0" style="-fx-background-color: DARKRED;" text="SUBMIT" textFill="WHITE">
                                  <VBox.margin>
                                     <Insets top="40.0" />
                                  </VBox.margin>

@@ -133,15 +133,18 @@ public class SceneController
     //this method checks if the student is valid and then sends them to the check order page if true
     public void handleCheckOrders() throws Exception
     {
-        //check if id is valid
-        Integer val1 = Integer.valueOf(sIDField.getText());
-        if (val1 == 1)
-        {
-            //if valid go to StudentOrderStatus
+        //if the student id is not valid change the textfield red and change the prompt
+        String ASURITE = sIDField.getText();
+
+        if (ASURITE.length() == 10 && isNumeric(ASURITE)) {
             Parent root = FXMLLoader.load(getClass().getResource("StudentOrderStatus.fxml"));
 
-            Stage newStage = (Stage) (sIDField.getScene().getWindow());
+            Stage newStage = (Stage) (poSubmitButton.getScene().getWindow());
             newStage.setScene(new Scene(root, 700, 500));
+        } else {
+            sIDField.setStyle("-fx-text-box-border: #ff0000; -fx-focus-color: #ff0000;");
+            sIDField.setText("");
+            sIDField.setPromptText("PLEASE ENTER A VALID ID");
         }
     }
 
@@ -190,7 +193,7 @@ public class SceneController
         }
     }
 
-    //Checks where an input is Numeric
+    //Checks whether an input is Numeric
     public static boolean isNumeric(String string)
     {
         int value;

@@ -112,7 +112,7 @@ public class SceneController
     public void handleNewOrder() throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("OrderPizza.fxml")); //not working... idk why
-        Stage newStage = (Stage) (sNewOrderButton.getScene().getWindow());
+        Stage newStage = (Stage) (sNewOrderButton.getScene().getWindow());  //this line is throwing an error :/
         newStage.setScene(new Scene(root, 700, 500));
     }
 
@@ -145,9 +145,9 @@ public class SceneController
         newStage.setScene(new Scene(root, 700, 500));
     }
 
-    //============================
+    //==============================
     //Handle OrderSuccessful actions
-    //============================
+    //==============================
 
     //This method returns the user to the homepage
     public void handleReturnHome() throws Exception

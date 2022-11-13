@@ -93,12 +93,14 @@ public class SceneController
     {
         //if id from employeeIDField is valid login
         Integer val1 = Integer.valueOf(employeeIDField.getText());
+        //if id is type chef
         if (val1 == 1)
         {
             Parent root = FXMLLoader.load(getClass().getResource("ChefView.fxml"));
             Stage newStage = (Stage) (employeeIDField.getScene().getWindow());
             newStage.setScene(new Scene(root, 700, 500));
         }
+        //if id is type order processing agent
         else if (val1 == 2)
         {
             Parent root = FXMLLoader.load(getClass().getResource("OrderProcessingAgentView.fxml"));
@@ -129,15 +131,21 @@ public class SceneController
     public void handleCheckOrders() throws Exception
     {
         //check if id is valid
-
-        //if valid go to StudentOrderStatus
+        Integer val1 = Integer.valueOf(sIDField.getText());
+        if (val1 == 1)
+        {
+            //if valid go to StudentOrderStatus
+            Parent root = FXMLLoader.load(getClass().getResource("StudentOrderStatus.fxml"));
+            Stage newStage = (Stage) (sIDField.getScene().getWindow());
+            newStage.setScene(new Scene(root, 700, 500));
+        }
     }
 
     //this method sends the student to a new order form
     public void handleNewOrder() throws Exception
     {
-        Parent root = FXMLLoader.load(getClass().getResource("OrderPizza.fxml")); //not working... idk why
-        Stage newStage = (Stage) (sNewOrderButton.getScene().getWindow());  //this line is throwing an error :/
+        Parent root = FXMLLoader.load(getClass().getResource("OrderPizza.fxml"));
+        Stage newStage = (Stage) (sIDField.getScene().getWindow());
         newStage.setScene(new Scene(root, 700, 500));
     }
 

@@ -84,7 +84,7 @@
                               <CheckBox fx:id="oliveButton" mnemonicParsing="false" onAction="#handlePizzaToppings" text="Olives" />
                               <CheckBox fx:id="onionButton" mnemonicParsing="false" onAction="#handlePizzaToppings" text="Onion" />
                               <CheckBox fx:id="extraCheeseButton" mnemonicParsing="false" onAction="#handlePizzaToppings" text="Extra Cheese" />
-                              <Button fx:id="poSubmitButton" mnemonicParsing="false" onAction="#handleOrderSubmit" prefHeight="52.0" prefWidth="71.0" style="-fx-background-color: DARKRED;" text="SUBMIT" textFill="WHITE">
+                              <Button fx:id="poSubmitButton" mnemonicParsing="false" onAction="#handleOrderSubmit" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: DARKRED;" text="SUBMIT" textFill="WHITE">
                                  <VBox.margin>
                                     <Insets top="40.0" />
                                  </VBox.margin>
@@ -107,4 +107,11 @@
          </children>
       </VBox>
    </center>
+   <left>
+      <Button fx:id="oReturnHome" mnemonicParsing="false" onAction="#handlePOHome" style="-fx-background-color: DARKRED;" text="HOME" textFill="WHITE" BorderPane.alignment="BOTTOM_LEFT">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" />
+         </BorderPane.margin>
+      </Button>
+   </left>
 </BorderPane>

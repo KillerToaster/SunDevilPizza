@@ -57,4 +57,11 @@
          </children>
       </VBox>
    </center>
+   <left>
+      <Button fx:id="opaHome" mnemonicParsing="false" onAction="#handleOPAHome" style="-fx-background-color: DARKRED;" text="HOME" textFill="WHITE" BorderPane.alignment="BOTTOM_LEFT">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" />
+         </BorderPane.margin>
+      </Button>
+   </left>
 </BorderPane>

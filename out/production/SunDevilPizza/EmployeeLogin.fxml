@@ -41,7 +41,7 @@
                   <Label text="Employee ID:" />
                   <VBox prefHeight="39.0" prefWidth="288.0">
                      <children>
-                        <TextField fx:id="employeeIDField" prefHeight="25.0" onMouseClicked="#handleIDFieldOnMouseClicked" prefWidth="181.0" promptText="ENTER EMPLOYEE ID HERE">
+                        <TextField fx:id="employeeIDField" prefHeight="25.0" prefWidth="181.0" promptText="ENTER EMPLOYEE ID HERE">
                            <VBox.margin>
                               <Insets />
                            </VBox.margin>
@@ -64,4 +64,11 @@
          </children>
       </VBox>
    </center>
+   <left>
+      <Button fx:id="employeeLoginHome" mnemonicParsing="false" onAction="#handleELoginHome" style="-fx-background-color: DARKRED;" text="HOME" textFill="WHITE" BorderPane.alignment="BOTTOM_LEFT">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" />
+         </BorderPane.margin>
+      </Button>
+   </left>
 </BorderPane>

@@ -37,19 +37,19 @@ public class SceneController
     //EmployeeLogin page nodes
     @FXML
     TextField employeeIDField;
-    Button employeeLoginButton;
+    Button employeeLoginButton, employeeLoginHome;
 
     //StudentLogin page nodes
     @FXML
     TextField sIDField;
-    Button sSubmitButton, sNewOrderButton;
+    Button sSubmitButton, sNewOrderButton, studentLoginHome;
 
     //PizzaOrderPage nodes
     @FXML
     TextField poASURITE;
     RadioButton cheeseButton, pepperoniButton, veggieButton;
     CheckBox mushroomButton, oliveButton, onionButton, extraCheeseButton;
-    Button poSubmitButton;
+    Button poSubmitButton, poReturnHome;
 
     //OrderSuccessful
     @FXML
@@ -57,11 +57,11 @@ public class SceneController
 
     //OrderProcessingAgentView nodes
     VBox orderBox;
-    Button readyToCookButton, deleteButton;
+    Button readyToCookButton, deleteButton, opaHome;
 
     //ChefView nodes
     VBox chefOrderBox;
-    Button cookingButton, readyButton;
+    Button cookingButton, readyButton, chefViewHome;
 
     //=======================
     //Handle HomePage actions
@@ -102,18 +102,17 @@ public class SceneController
             Stage newStage = (Stage) (employeeIDField.getScene().getWindow());
             newStage.setScene(new Scene(root, 700, 500));
         }
-        //if id is type order processing agent
-        else if (val1 == 2)
+        else if (val1 == 2)//if id is type order processing agent
         {
             Parent root = FXMLLoader.load(getClass().getResource("OrderProcessingAgentView.fxml"));
 
             Stage newStage = (Stage) (employeeIDField.getScene().getWindow());
             newStage.setScene(new Scene(root, 700, 500));
         }
-        //else outline employeeIDField in red and change prompt text to "PLEASE ENTER A VALID ID"
-        //there are two employee types. log them in accordingly
         else
         {
+            //else outline employeeIDField in red and change prompt text to "PLEASE ENTER A VALID ID"
+            //there are two employee types. log them in accordingly
             employeeIDField.setStyle("-fx-text-box-border: #ff0000; -fx-focus-color: #ff0000;");
             employeeIDField.setText("");
             employeeIDField.setPromptText("PLEASE ENTER A VALID ID");
@@ -124,6 +123,14 @@ public class SceneController
     public void handleIDFieldOnMouseClicked() throws Exception
     {
         employeeIDField.setStyle("-fx-border-width: 0px");
+    }
+
+    //returns user to the home page
+    public void handleELoginHome() throws Exception
+    {
+        Parent root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
+        Stage newStage = (Stage) (employeeLoginHome.getScene().getWindow());
+        newStage.setScene(new Scene(root, 700, 500));
     }
 
     //============================
@@ -155,6 +162,14 @@ public class SceneController
 
         Stage newStage = (Stage) (sIDField.getScene().getWindow());
         newStage.setScene(new Scene(root, 700, 500));
+    }
+
+    public void handleSLoginHome() throws Exception
+    {
+        Parent root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
+        Stage newStage2 = (Stage) (studentLoginHome.getScene().getWindow());
+        newStage2.setScene(new Scene(root, 600, 400));
+
     }
 
 
@@ -211,6 +226,13 @@ public class SceneController
         return false;
     }
 
+    public void handlePOHome() throws Exception
+    {
+        Parent root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
+        Stage newStage = (Stage) (ossReturnButton.getScene().getWindow());
+        newStage.setScene(new Scene(root, 700, 500));
+    }
+
     //==============================
     //Handle OrderSuccessful actions
     //==============================
@@ -219,7 +241,6 @@ public class SceneController
     public void handleReturnHome() throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
-
         Stage newStage = (Stage) (ossReturnButton.getScene().getWindow());
         newStage.setScene(new Scene(root, 700, 500));
     }
@@ -252,6 +273,13 @@ public class SceneController
 
     }
 
+    public void handleOPAHome() throws Exception
+    {
+        Parent root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
+        Stage newStage = (Stage) (opaHome.getScene().getWindow());
+        newStage.setScene(new Scene(root, 700, 500));
+    }
+
 
     //=======================================
     //Handle OrderChefView actions
@@ -280,5 +308,10 @@ public class SceneController
 
     }
 
-
+    public void handleChefHome() throws Exception
+    {
+        Parent root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
+        Stage newStage = (Stage) (chefViewHome.getScene().getWindow());
+        newStage.setScene(new Scene(root, 700, 500));
+    }
 }

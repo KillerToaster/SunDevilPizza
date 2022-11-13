@@ -32,7 +32,11 @@ public class SceneController
     @FXML
     Button hpEmployeeButton, hpStudentButton;
     TextField employeeIDField;
+    //EmployeeLogin page
     Button employeeLoginButton;
+    //StudentLogin page
+
+    //PizzaOrderPage
 
     //=======================
     //Handle HomePage actions

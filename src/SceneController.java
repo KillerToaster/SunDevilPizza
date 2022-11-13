@@ -147,4 +147,32 @@ public class SceneController
         newStage.setScene(new Scene(root, 700, 500));
     }
 
+    //=======================================
+    //Handle OrderProcessingAgentView actions
+    //=======================================
+
+    // This page needs to be populated dynamically by Pizza objects
+    // (most likely stored in an ArrayList upon initialization)
+    // this needs to be javaFX code based on how the database is written
+
+    //the order processing agent actor can delete any order from the queue
+
+    //the GUI should populate using check boxes
+    //when the box is checked, the order can be changed using buttons
+
+
+    //=======================================
+    //Handle OrderChefView actions
+    //=======================================
+
+    // This page needs to be populated dynamically by Pizza objects
+    // (most likely stored in an ArrayList upon initialization)
+    // this needs to be javaFX code based on how the database is written
+
+    //the chef is the actor which completes the order and sends the email
+    //to simulate this, use a dialog box that simply says: "Email sent to customer #: [ASURITE ID]"
+
+    //the GUI should populate using check boxes
+    //when the box is checked, the order can be changed using buttons
+
 }

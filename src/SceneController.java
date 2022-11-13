@@ -28,15 +28,30 @@ import java.io.IOException;
 
 public class SceneController
 {
-
+    //Home Page nodes
     @FXML
     Button hpEmployeeButton, hpStudentButton;
     TextField employeeIDField;
-    //EmployeeLogin page
-    Button employeeLoginButton;
-    //StudentLogin page
 
-    //PizzaOrderPage
+    //EmployeeLogin page nodes
+    @FXML
+    Button employeeLoginButton;
+
+    //StudentLogin page nodes
+    @FXML
+    TextField sIDField;
+    Button sSubmitButton, sNewOrderButton;
+
+    //PizzaOrderPage nodes
+    @FXML
+    TextField poASURITE;
+    RadioButton cheeseButton, pepperoniButton, veggieButton;
+    CheckBox mushroomButton, oliveButton, onionButton, extraCheeseButton;
+    Button poSubmitButton;
+
+    //OrderSuccessful
+    @FXML
+    Button ossReturnButton;
 
     //=======================
     //Handle HomePage actions
@@ -55,7 +70,6 @@ public class SceneController
     public void hpStudentHandler() throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("StudentLogin.fxml"));
-
         Stage newStage = (Stage) (hpStudentButton.getScene().getWindow());
         newStage.setScene(new Scene(root, 700, 500));
     }
@@ -63,8 +77,6 @@ public class SceneController
     //============================
     //Handle EmployeeLogin actions
     //============================
-
-
 
     public void handleEmployeeLogin() throws Exception
     {
@@ -78,9 +90,55 @@ public class SceneController
     //Handle StudentLogin actions
     //============================
 
+    public void handleCheckOrders() throws Exception
+    {
+        //check if id is valid
+
+        //if valid go to StudentOrderStatus
+    }
+
+    public void handleNewOrder() throws Exception
+    {
+        Parent root = FXMLLoader.load(getClass().getResource("OrderPizza.fxml"));
+        Stage newStage = (Stage) (sNewOrderButton.getScene().getWindow());
+        newStage.setScene(new Scene(root, 700, 500));
+    }
+
 
     //============================
-    //Handle PizzaOrder actions
+    //Handle OrderPizza actions
     //============================
+
+    public void handlePizzaType()
+    {
+        //only one of the radio buttons can be selected at a time
+    }
+
+    public void handlePizzaToppings()
+    {
+        //anywhere between 0-4 toppings
+    }
+
+    public void handleOrderSubmit() throws Exception
+    {
+        //if the student id is not valid change the textfield red and change the prompt
+
+        //else change the scene and put the order in the order database
+        Parent root = FXMLLoader.load(getClass().getResource("OrderSuccessful.fxml"));
+        Stage newStage = (Stage) (poSubmitButton.getScene().getWindow());
+        newStage.setScene(new Scene(root, 700, 500));
+    }
+
+    //============================
+    //Handle OrderSuccessful actions
+    //============================
+
+    public void handleReturnHome() throws Exception
+    {
+        Parent root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
+
+        Stage newStage = (Stage) (ossReturnButton.getScene().getWindow());
+        newStage.setScene(new Scene(root, 700, 500));
+    }
 
 }

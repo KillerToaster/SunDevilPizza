@@ -78,18 +78,19 @@ public class SceneController
     //Handle EmployeeLogin actions
     //============================
 
+    //this method checks if an employee is valid and them takes them to the correct order page
     public void handleEmployeeLogin() throws Exception
     {
         //if id from employeeIDField is valid login
         //else outline employeeIDField in red and change prompt text to "PLEASE ENTER A VALID ID"
         //there are two employee types. log them in accordingly
-        return;
     }
 
     //============================
     //Handle StudentLogin actions
     //============================
 
+    //this method checks if the student is valid and then sends them to the check order page if true
     public void handleCheckOrders() throws Exception
     {
         //check if id is valid
@@ -97,6 +98,7 @@ public class SceneController
         //if valid go to StudentOrderStatus
     }
 
+    //this method sends the student to a new order form
     public void handleNewOrder() throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("OrderPizza.fxml"));
@@ -109,16 +111,19 @@ public class SceneController
     //Handle OrderPizza actions
     //============================
 
+    //this method manages the state of the pizza type
     public void handlePizzaType()
     {
         //only one of the radio buttons can be selected at a time
     }
 
+    //this method manages the state of the checkboxes
     public void handlePizzaToppings()
     {
         //anywhere between 0-4 toppings
     }
 
+    //this method checks the validity of an order and submits it to the system accordingly
     public void handleOrderSubmit() throws Exception
     {
         //if the student id is not valid change the textfield red and change the prompt
@@ -133,6 +138,7 @@ public class SceneController
     //Handle OrderSuccessful actions
     //============================
 
+    //This method returns the user to the homepage
     public void handleReturnHome() throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));

@@ -80,6 +80,7 @@ public class SceneController
     public void hpStudentHandler() throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("StudentLogin.fxml"));
+
         Stage newStage = (Stage) (hpStudentButton.getScene().getWindow());
         newStage.setScene(new Scene(root, 700, 500));
     }
@@ -97,6 +98,7 @@ public class SceneController
         if (val1 == 1)
         {
             Parent root = FXMLLoader.load(getClass().getResource("ChefView.fxml"));
+
             Stage newStage = (Stage) (employeeIDField.getScene().getWindow());
             newStage.setScene(new Scene(root, 700, 500));
         }
@@ -104,6 +106,7 @@ public class SceneController
         else if (val1 == 2)
         {
             Parent root = FXMLLoader.load(getClass().getResource("OrderProcessingAgentView.fxml"));
+
             Stage newStage = (Stage) (employeeIDField.getScene().getWindow());
             newStage.setScene(new Scene(root, 700, 500));
         }
@@ -136,6 +139,7 @@ public class SceneController
         {
             //if valid go to StudentOrderStatus
             Parent root = FXMLLoader.load(getClass().getResource("StudentOrderStatus.fxml"));
+
             Stage newStage = (Stage) (sIDField.getScene().getWindow());
             newStage.setScene(new Scene(root, 700, 500));
         }
@@ -145,6 +149,7 @@ public class SceneController
     public void handleNewOrder() throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("OrderPizza.fxml"));
+
         Stage newStage = (Stage) (sIDField.getScene().getWindow());
         newStage.setScene(new Scene(root, 700, 500));
     }
@@ -173,17 +178,35 @@ public class SceneController
         //if the student id is not valid change the textfield red and change the prompt
         String ASURITE = poASURITE.getText();
 
-        if (ASURITE.length() == 10)
-        {
+        if (ASURITE.length() == 10 && isNumeric(ASURITE)) {
             Parent root = FXMLLoader.load(getClass().getResource("OrderSuccessful.fxml"));
+
             Stage newStage = (Stage) (poSubmitButton.getScene().getWindow());
             newStage.setScene(new Scene(root, 700, 500));
-        } else
-        {
+        } else {
             poASURITE.setStyle("-fx-text-box-border: #ff0000; -fx-focus-color: #ff0000;");
             poASURITE.setText("");
             poASURITE.setPromptText("PLEASE ENTER A VALID ID");
         }
+    }
+
+    //Checks where an input is Numeric
+    public static boolean isNumeric(String string)
+    {
+        int value;
+
+        if(string == null || string.equals("")) {
+            System.out.println("String is null or empty.");
+            return false;
+        }
+
+        try {
+            value = Integer.parseInt(string);
+            return true;
+        } catch (NumberFormatException e) {
+            System.out.println("String is not numeric");
+        }
+        return false;
     }
 
     //==============================

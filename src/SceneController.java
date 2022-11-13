@@ -104,10 +104,11 @@ public class SceneController
         {
             employeeIDField.setStyle("-fx-text-box-border: #ff0000; -fx-focus-color: #ff0000;");
             employeeIDField.setText("");
-            employeeIDField.setPromptText("INVALID ID");
+            employeeIDField.setPromptText("PLEASE ENTER A VALID ID");
         }
     }
 
+    //this method removed the red border when the user clicks back on the text field if they previously input an invalid ID
     public void handleIDFieldOnMouseClicked() throws Exception
     {
         employeeIDField.setStyle("-fx-border-width: 0px");

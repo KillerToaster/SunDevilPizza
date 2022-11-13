@@ -33,10 +33,10 @@ public class SceneController
     //Home Page nodes
     @FXML
     Button hpEmployeeButton, hpStudentButton;
-    TextField employeeIDField;
 
     //EmployeeLogin page nodes
     @FXML
+    TextField employeeIDField;
     Button employeeLoginButton;
 
     //StudentLogin page nodes
@@ -88,12 +88,29 @@ public class SceneController
     //Handle EmployeeLogin actions
     //============================
 
-    //this method checks if an employee is valid and them takes them to the correct order page
+    //this method checks if an employee is valid and then takes them to the correct order page
     public void handleEmployeeLogin() throws Exception
     {
         //if id from employeeIDField is valid login
+        Integer val1 = Integer.valueOf(employeeIDField.getText());
+        if (val1 == 1)
+        {
+            employeeIDField.setText("");
+            employeeIDField.setPromptText("GOOD JOB");
+        }
         //else outline employeeIDField in red and change prompt text to "PLEASE ENTER A VALID ID"
         //there are two employee types. log them in accordingly
+        else
+        {
+            employeeIDField.setStyle("-fx-text-box-border: #ff0000; -fx-focus-color: #ff0000;");
+            employeeIDField.setText("");
+            employeeIDField.setPromptText("INVALID ID");
+        }
+    }
+
+    public void handleIDFieldOnMouseClicked() throws Exception
+    {
+        employeeIDField.setStyle("-fx-border-width: 0px");
     }
 
     //============================

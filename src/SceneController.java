@@ -93,16 +93,16 @@ public class SceneController
     public void handleEmployeeLogin() throws Exception
     {
         //if id from employeeIDField is valid login
-        Integer val1 = Integer.valueOf(employeeIDField.getText());
+        String employeeID = employeeIDField.getText();
         //if id is type chef
-        if (val1 == 1)
+        if (isNumeric(employeeID) && employeeID.charAt(0) == '1')
         {
             Parent root = FXMLLoader.load(getClass().getResource("ChefView.fxml"));
 
             Stage newStage = (Stage) (employeeIDField.getScene().getWindow());
             newStage.setScene(new Scene(root, 700, 500));
         }
-        else if (val1 == 2)//if id is type order processing agent
+        if (isNumeric(employeeID) && employeeID.charAt(0) == '2')//if id is type order processing agent
         {
             Parent root = FXMLLoader.load(getClass().getResource("OrderProcessingAgentView.fxml"));
 

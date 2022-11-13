@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="073015da-8f2c-40ce-b210-7ed10ded8dee" name="Changes" comment="added empty structures" />
+    <list default="true" id="073015da-8f2c-40ce-b210-7ed10ded8dee" name="Changes" comment="On submit order, Check if ASURITE is 10 Characters" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,15 +30,13 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\KillerToaster\Documents\SunDevilPizza\src" />
@@ -162,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668378069634</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="On submit order, Check if ASURITE is 10 Characters">
+      <created>1668378358803</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1668378358803</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -186,6 +191,7 @@
     <MESSAGE value="added notes" />
     <MESSAGE value="added empty structures" />
     <MESSAGE value="4:34 pm 11/12/22" />
-    <option name="LAST_COMMIT_MESSAGE" value="4:34 pm 11/12/22" />
+    <MESSAGE value="On submit order, Check if ASURITE is 10 Characters" />
+    <option name="LAST_COMMIT_MESSAGE" value="On submit order, Check if ASURITE is 10 Characters" />
   </component>
 </project>

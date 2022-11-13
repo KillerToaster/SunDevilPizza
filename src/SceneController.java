@@ -95,8 +95,15 @@ public class SceneController
         Integer val1 = Integer.valueOf(employeeIDField.getText());
         if (val1 == 1)
         {
-            employeeIDField.setText("");
-            employeeIDField.setPromptText("GOOD JOB");
+            Parent root = FXMLLoader.load(getClass().getResource("ChefView.fxml"));
+            Stage newStage = (Stage) (employeeIDField.getScene().getWindow());
+            newStage.setScene(new Scene(root, 700, 500));
+        }
+        else if (val1 == 2)
+        {
+            Parent root = FXMLLoader.load(getClass().getResource("OrderProcessingAgentView.fxml"));
+            Stage newStage = (Stage) (employeeIDField.getScene().getWindow());
+            newStage.setScene(new Scene(root, 700, 500));
         }
         //else outline employeeIDField in red and change prompt text to "PLEASE ENTER A VALID ID"
         //there are two employee types. log them in accordingly

@@ -80,7 +80,6 @@ public class SceneController
     public void hpEmployeeHandler() throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("EmployeeLogin.fxml"));
-
         Stage newStage = (Stage) (hpEmployeeButton.getScene().getWindow());
         newStage.setScene(new Scene(root, 700, 500));
     }
@@ -89,7 +88,6 @@ public class SceneController
     public void hpStudentHandler() throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("StudentLogin.fxml"));
-
         Stage newStage = (Stage) (hpStudentButton.getScene().getWindow());
         newStage.setScene(new Scene(root, 700, 500));
     }
@@ -107,14 +105,12 @@ public class SceneController
         if (isNumeric(employeeID) && employeeID.charAt(0) == '1')
         {
             Parent root = FXMLLoader.load(getClass().getResource("ChefView.fxml"));
-
             Stage newStage = (Stage) (employeeIDField.getScene().getWindow());
             newStage.setScene(new Scene(root, 700, 500));
         }
         if (isNumeric(employeeID) && employeeID.charAt(0) == '2')//if id is type order processing agent
         {
             Parent root = FXMLLoader.load(getClass().getResource("OrderProcessingAgentView.fxml"));
-
             Stage newStage = (Stage) (employeeIDField.getScene().getWindow());
             newStage.setScene(new Scene(root, 700, 500));
         }
@@ -158,7 +154,7 @@ public class SceneController
 
         if (ASURITE.length() == 10 && isNumeric(ASURITE)) {
             Parent root = FXMLLoader.load(getClass().getResource("StudentOrderStatus.fxml"));
-            Stage newStage = (Stage) (poSubmitButton.getScene().getWindow());
+            Stage newStage = (Stage) (sSubmitButton.getScene().getWindow());
             newStage.setScene(new Scene(root, 700, 500));
         } else {
             sIDField.setStyle("-fx-text-box-border: #ff0000; -fx-focus-color: #ff0000;");
@@ -171,7 +167,6 @@ public class SceneController
     public void handleNewOrder() throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("OrderPizza.fxml"));
-
         Stage newStage = (Stage) (sIDField.getScene().getWindow());
         newStage.setScene(new Scene(root, 700, 500));
     }
@@ -180,8 +175,7 @@ public class SceneController
     {
         Parent root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
         Stage newStage2 = (Stage) (studentLoginHome.getScene().getWindow());
-        newStage2.setScene(new Scene(root, 600, 400));
-
+        newStage2.setScene(new Scene(root, 700, 500));
     }
 
 
@@ -210,7 +204,6 @@ public class SceneController
 
         if (ASURITE.length() == 10 && isNumeric(ASURITE)) {
             Parent root = FXMLLoader.load(getClass().getResource("OrderSuccessful.fxml"));
-
             Stage newStage = (Stage) (poSubmitButton.getScene().getWindow());
             newStage.setScene(new Scene(root, 700, 500));
         } else {

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="073015da-8f2c-40ce-b210-7ed10ded8dee" name="Changes" comment="Fixed bug with isNumerical where too large number would be invalid">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SunDevilPizza/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SunDevilPizza/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SunDevilPizza/SceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SunDevilPizza/SceneController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SceneController.java" afterDir="false" />
     </list>
@@ -185,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668386298585</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Fixed bug with isNumerical where too large number would be invalid">
+      <created>1668400426895</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1668400426895</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -213,6 +221,7 @@
     <MESSAGE value="Fixed bugged where handleSLoginHome() would resize scene" />
     <MESSAGE value="5:34 PM 11/13/2022" />
     <MESSAGE value="Fixed bug with OrderPizza() Home button" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug with OrderPizza() Home button" />
+    <MESSAGE value="Fixed bug with isNumerical where too large number would be invalid" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug with isNumerical where too large number would be invalid" />
   </component>
 </project>

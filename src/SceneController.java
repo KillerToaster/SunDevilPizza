@@ -183,29 +183,23 @@ public class SceneController
 
             TextArea orderTextArea = new TextArea("");
             //add the order
+            BufferedReader reader;
+            try {
+                reader = new BufferedReader(new FileReader("log.txt"));
+                String line = reader.readLine();
+                while (line != null) {
+                    System.out.println(line);
+                    orderTextArea.appendText(line);
+                    orderTextArea.appendText("\n");
+                    // read next line
+                    line = reader.readLine();
+                }
+                reader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
             //studentOrderBox.getChildren().add(orderTextArea); //throwing an error
-
-            //create a new arrayList
-            ArrayList<PizzaOrder> list = new ArrayList<PizzaOrder>();
-            //fill this array list with orders from log.txt
-            //create string with necessary text
-            String orderText = "";
-            for(int idx = 0; idx < list.size(); idx++)
-            {
-                if(list.get(idx).getID().equals("ASURITE"))
-                {
-                    orderText = orderText + list.get(idx).toString();
-                }
-            }
-            if(orderText.equals(""))
-            {
-                orderTextArea.setText("You Have No Current Orders");
-            }
-            else
-            {
-                orderTextArea.setText(orderText);
-            }
 
             orderTextArea.setEditable(false);
             orderTextArea.setPrefSize(300, 300);
@@ -287,31 +281,22 @@ public class SceneController
         String toppings = "";
         if (mushroomButton.isSelected())
         {
-            toppings = toppings +"true ";
-        } else
-        {
-            toppings = toppings +"false ";
+            toppings = toppings +"mushroom ";
         }
+
         if (oliveButton.isSelected())
         {
-            toppings = toppings +"true ";
-        } else
-        {
-            toppings = toppings +"false ";
+            toppings = toppings +"olive ";
         }
+
         if (onionButton.isSelected())
         {
-            toppings = toppings +"true ";
-        } else
-        {
-            toppings = toppings +"false ";
+            toppings = toppings +"onion ";
         }
+
         if (extraCheeseButton.isSelected())
         {
-            toppings = toppings +"true ";
-        } else
-        {
-            toppings = toppings +"false ";
+            toppings = toppings +"extraCheese ";
         }
 
         return toppings;

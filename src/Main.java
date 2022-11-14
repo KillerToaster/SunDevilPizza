@@ -17,7 +17,7 @@ public class Main extends Application
     {
         Parent root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
         stage.setTitle("SunDevil Pizza");
-        stage.setScene(new Scene(root, 700, 500));
+        stage.setScene(new Scene(root, 600, 400));
         stage.setResizable(false);
         stage.getIcons().add(new Image(Main.class.getResourceAsStream("/resources/pizzaSlice.png")));
         stage.show();

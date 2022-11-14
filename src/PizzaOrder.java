@@ -47,6 +47,8 @@ public class PizzaOrder implements Serializable
         if(extraCheese == true)
             toppings = toppings + "extra cheese";
 
+        if(toppings.equals(""))
+            return "no toppings";
         return toppings;
     }
 
@@ -59,5 +61,10 @@ public class PizzaOrder implements Serializable
     public void changeStatus(String newStatus)
     {
         status = newStatus;
+    }
+
+    public String toString()
+    {
+        return "Order ID: " + id + "\n" + "Status: " + status + "\n" + pizzaType + " with " + this.getToppings();
     }
 }

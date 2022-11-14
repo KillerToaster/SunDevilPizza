@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 
 public class Main extends Application
 {
-
+    List<PizzaOrder> list = new ArrayList<PizzaOrder>();
     public void start(Stage stage) throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
@@ -28,7 +28,11 @@ public class Main extends Application
 
     public static void main(String[] args)
     {
-        List<PizzaOrder> list = new ArrayList<PizzaOrder>();
         launch(args);
+    }
+
+    public List<PizzaOrder> getList()
+    {
+        return list;
     }
 }

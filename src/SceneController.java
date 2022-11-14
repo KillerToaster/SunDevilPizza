@@ -37,18 +37,23 @@ public class SceneController
     //EmployeeLogin page nodes
     @FXML
     TextField employeeIDField;
+    @FXML
     Button employeeLoginButton, employeeLoginHome;
 
     //StudentLogin page nodes
     @FXML
     TextField sIDField;
+    @FXML
     Button sSubmitButton, sNewOrderButton, studentLoginHome;
 
     //PizzaOrderPage nodes
     @FXML
     TextField poASURITE;
+    @FXML
     RadioButton cheeseButton, pepperoniButton, veggieButton;
+    @FXML
     CheckBox mushroomButton, oliveButton, onionButton, extraCheeseButton;
+    @FXML
     Button poSubmitButton, poReturnHome;
 
     //OrderSuccessful
@@ -56,11 +61,15 @@ public class SceneController
     Button ossReturnButton;
 
     //OrderProcessingAgentView nodes
+    @FXML
     VBox orderBox;
+    @FXML
     Button readyToCookButton, deleteButton, opaHome;
 
     //ChefView nodes
+    @FXML
     VBox chefOrderBox;
+    @FXML
     Button cookingButton, readyButton, chefViewHome;
 
     //=======================

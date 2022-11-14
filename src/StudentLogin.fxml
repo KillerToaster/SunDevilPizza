@@ -41,7 +41,7 @@
                   <Label text=" ASURITE ID:" />
                   <VBox prefHeight="100.0" prefWidth="245.0">
                      <children>
-                        <TextField fx:id="sIDField" prefHeight="25.0" prefWidth="217.0" promptText="ENTER 10 DIGIT ID">
+                        <TextField fx:id="sIDField" prefHeight="25.0" prefWidth="217.0" promptText="ENTER 10 DIGIT ID" onMouseClicked="#handlesIDFieldOnMouseClicked">
                            <VBox.margin>
                               <Insets left="20.0" />
                            </VBox.margin>

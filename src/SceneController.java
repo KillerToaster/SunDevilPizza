@@ -120,9 +120,13 @@ public class SceneController
     }
 
     //this method removed the red border when the user clicks back on the text field if they previously input an invalid ID
-    public void handleIDFieldOnMouseClicked() throws Exception
+    public void handleEmployeeIDFieldOnMouseClicked() throws Exception
     {
         employeeIDField.setStyle("-fx-border-width: 0px");
+    }
+    public void handlesIDFieldOnMouseClicked() throws Exception
+    {
+        sIDField.setStyle("-fx-border-width: 0px");
     }
 
     //returns user to the home page
@@ -145,7 +149,6 @@ public class SceneController
 
         if (ASURITE.length() == 10 && isNumeric(ASURITE)) {
             Parent root = FXMLLoader.load(getClass().getResource("StudentOrderStatus.fxml"));
-
             Stage newStage = (Stage) (poSubmitButton.getScene().getWindow());
             newStage.setScene(new Scene(root, 700, 500));
         } else {

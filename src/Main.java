@@ -1,10 +1,7 @@
-//  Phase #: 3
-//  Names: Andrew Gantner, Majid Ghasib, Kelvin Tran, Jimmy Phan, Isabella Hutchinson
-//  Group #: 35
-//  Lecture: 9:00 - 10:15 AM TH
-//  Description: This is the driver class for this application
-
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -23,7 +20,7 @@ public class Main extends Application
     {
         Parent root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
         stage.setTitle("SunDevil Pizza");
-        stage.setScene(new Scene(root, 600, 400));
+        stage.setScene(new Scene(root, 700, 500));
         stage.setResizable(false);
         stage.getIcons().add(new Image(Main.class.getResourceAsStream("/resources/pizzaSlice.png")));
         stage.show();
@@ -31,7 +28,7 @@ public class Main extends Application
 
     public static void main(String[] args)
     {
-
+        List<PizzaOrder> list = new ArrayList<PizzaOrder>();
         launch(args);
     }
 }

@@ -241,7 +241,7 @@ public class SceneController
     public void handlePOHome() throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
-        Stage newStage = (Stage) (ossReturnButton.getScene().getWindow());
+        Stage newStage = (Stage) (poASURITE.getScene().getWindow());
         newStage.setScene(new Scene(root, 700, 500));
     }
 

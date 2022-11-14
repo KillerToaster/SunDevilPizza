@@ -188,9 +188,13 @@ public class SceneController
                 reader = new BufferedReader(new FileReader("log.txt"));
                 String line = reader.readLine();
                 while (line != null) {
-                    System.out.println(line);
-                    orderTextArea.appendText(line);
-                    orderTextArea.appendText("\n");
+                    String firstTenChars = line.substring(0, 10);
+                    System.out.println("First Ten: " + firstTenChars);
+                    System.out.println("ASURITE: " + ASURITE);
+                    if (firstTenChars.equals(ASURITE)) {
+                        orderTextArea.appendText(line);
+                        orderTextArea.appendText("\n");
+                    }
                     // read next line
                     line = reader.readLine();
                 }

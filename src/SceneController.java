@@ -416,7 +416,7 @@ public class SceneController
     public void handleSOSHome() throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
-        Stage newStage = (Stage) (studentOrderBox.getScene().getWindow());
+        Stage newStage = (Stage) (sosHome.getScene().getWindow());
         newStage.setScene(new Scene(root, 600, 400));
     }
 

@@ -131,6 +131,21 @@ public class SceneController
             TextArea orderTextArea = new TextArea("");
 
             //create order list here
+            BufferedReader reader;
+            try {
+                reader = new BufferedReader(new FileReader("log.txt"));
+                String line = reader.readLine();
+                while (line != null) {
+                    orderTextArea.appendText(line);
+                    orderTextArea.appendText("\n");
+                    // read next line
+                    line = reader.readLine();
+                }
+                reader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
 
             orderTextArea.setEditable(false);
             orderTextArea.setPrefSize(300, 300);
@@ -151,6 +166,20 @@ public class SceneController
             TextArea orderTextArea = new TextArea("");
 
             //create order list here
+            BufferedReader reader;
+            try {
+                reader = new BufferedReader(new FileReader("log.txt"));
+                String line = reader.readLine();
+                while (line != null) {
+                    orderTextArea.appendText(line);
+                    orderTextArea.appendText("\n");
+                    // read next line
+                    line = reader.readLine();
+                }
+                reader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
             orderTextArea.setEditable(false);
             orderTextArea.setPrefSize(300, 300);

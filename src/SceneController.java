@@ -75,6 +75,10 @@ public class SceneController
     @FXML
     Button cookingButton, readyButton, chefViewHome;
 
+    //studentview nodees
+    @FXML VBox studentOrderBox;
+    @FXML Button sosHome;
+
     //=======================
     //Handle HomePage actions
     //=======================
@@ -156,7 +160,7 @@ public class SceneController
         String ASURITE = sIDField.getText();
 
         if (ASURITE.length() == 10 && isNumeric(ASURITE)) {
-            Parent root = FXMLLoader.load(getClass().getResource("StudentOrderStatus.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("StudentOrderView.fxml"));
             Stage newStage = (Stage) (sSubmitButton.getScene().getWindow());
             newStage.setScene(new Scene(root, 700, 500));
         } else {
@@ -320,6 +324,17 @@ public class SceneController
     {
         Parent root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
         Stage newStage = (Stage) (chefViewHome.getScene().getWindow());
+        newStage.setScene(new Scene(root, 700, 500));
+    }
+
+    //=======================================
+    //Handle StudentOrderView actions
+    //=======================================
+
+    public void handleSOSHome() throws Exception
+    {
+        Parent root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
+        Stage newStage = (Stage) (studentOrderBox.getScene().getWindow());
         newStage.setScene(new Scene(root, 700, 500));
     }
 }

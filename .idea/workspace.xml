@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="073015da-8f2c-40ce-b210-7ed10ded8dee" name="Changes" comment="Fixed bug with OrderPizza() Home button">
+    <list default="true" id="073015da-8f2c-40ce-b210-7ed10ded8dee" name="Changes" comment="added authorship">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SunDevilPizza/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SunDevilPizza/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SunDevilPizza/SceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SunDevilPizza/SceneController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PizzaOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PizzaOrder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SceneController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +33,10 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -199,6 +202,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added fxml files" />

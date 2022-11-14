@@ -120,12 +120,18 @@ public class SceneController
             Parent root = FXMLLoader.load(getClass().getResource("ChefView.fxml"));
             Stage newStage = (Stage) (employeeIDField.getScene().getWindow());
             newStage.setScene(new Scene(root, 600, 400));
+
+            //Here populate the ChefView scene with orders that the chef can mutate
+            //if orderStatus = "ready to cook" or "Cooking" then the chef can change them
         }
         if (isNumeric(employeeID) && employeeID.charAt(0) == '2')//if id is type order processing agent
         {
             Parent root = FXMLLoader.load(getClass().getResource("OrderProcessingAgentView.fxml"));
             Stage newStage = (Stage) (employeeIDField.getScene().getWindow());
             newStage.setScene(new Scene(root, 600, 400));
+
+            //here, populate the AgentView with all orders, because this agent has more control
+
         }
         else
         {
@@ -169,7 +175,10 @@ public class SceneController
             Parent root = FXMLLoader.load(getClass().getResource("StudentOrderView.fxml"));
             Stage newStage = (Stage) (sSubmitButton.getScene().getWindow());
             newStage.setScene(new Scene(root, 600, 400));
-        } else {
+
+            //populate student view with their orders from the log.txt
+        }
+        else {
             sIDField.setStyle("-fx-text-box-border: #ff0000; -fx-focus-color: #ff0000;");
             sIDField.setText("");
             sIDField.setPromptText("PLEASE ENTER A VALID ID");
@@ -224,28 +233,14 @@ public class SceneController
             Parent root = FXMLLoader.load(getClass().getResource("OrderSuccessful.fxml"));
             Stage newStage = (Stage) (poSubmitButton.getScene().getWindow());
             newStage.setScene(new Scene(root, 600, 400));
-        } else {
+        }
+        else {
             poASURITE.setStyle("-fx-text-box-border: #ff0000; -fx-focus-color: #ff0000;");
             poASURITE.setText("");
             poASURITE.setPromptText("PLEASE ENTER A VALID ID");
         }
     }
 
-    public void Write(String ASURITE, String types, String toppings)
-    {
-        File log = new File("log.txt");
-        try{
-            if(log.exists()==false){
-                System.out.println("We had to make a new file.");
-                log.createNewFile();
-            }
-            PrintWriter out = new PrintWriter(new FileWriter(log, true));
-            out.append(ASURITE + " " + types +" " + toppings + "\n");
-            out.close();
-        }catch(IOException e){
-            System.out.println("COULD NOT LOG!!");
-        }
-    }
 
     public String getToppings()
     {
@@ -377,14 +372,31 @@ public class SceneController
         newStage.setScene(new Scene(root, 600, 400));
     }
 
-    //=======================================
-    //Handle StudentOrderView actions
-    //=======================================
 
     public void handleSOSHome() throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
         Stage newStage = (Stage) (studentOrderBox.getScene().getWindow());
         newStage.setScene(new Scene(root, 600, 400));
+    }
+
+    //=======================================
+    //Handle StudentOrderView actions
+    //=======================================
+
+    public void Write(String ASURITE, String types, String toppings)
+    {
+        File log = new File("log.txt");
+        try{
+            if(log.exists()==false){
+                System.out.println("We had to make a new file.");
+                log.createNewFile();
+            }
+            PrintWriter out = new PrintWriter(new FileWriter(log, true));
+            out.append(ASURITE + " " + types +" " + toppings + "\n");
+            out.close();
+        }catch(IOException e){
+            System.out.println("COULD NOT LOG!!");
+        }
     }
 }

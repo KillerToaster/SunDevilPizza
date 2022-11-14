@@ -1,4 +1,8 @@
-
+//  Phase #: 3
+//  Names: Andrew Gantner, Majid Ghasib, Kelvin Tran, Jimmy Phan, Isabella Hutchinson
+//  Group #: 35
+//  Lecture: 9:00 - 10:15 AM TH
+//  Description: This is the controller class for all interactions
 
 
 //clean up these import statements

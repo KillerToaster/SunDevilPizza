@@ -8,6 +8,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+
+import java.io.*;
 import java.util.ArrayList;
 
 import javafx.scene.control.*;
@@ -15,9 +17,6 @@ import javafx.event.ActionEvent; //**Need to import
 import javafx.event.EventHandler; //**Need to import
 import javafx.scene.layout.*;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -62,6 +61,9 @@ public class SceneController
 
     @FXML
     Button oReturnHome;
+
+    @FXML
+    ToggleGroup type;
 
     //OrderProcessingAgentView nodes
     @FXML
@@ -210,6 +212,11 @@ public class SceneController
         String ASURITE = poASURITE.getText();
 
         if (ASURITE.length() == 10 && isNumeric(ASURITE)) {
+            ToggleButton selectedToggleButton =
+                    (ToggleButton) type.getSelectedToggle();
+
+            Write(ASURITE, selectedToggleButton.getText(), getToppings());
+
             Parent root = FXMLLoader.load(getClass().getResource("OrderSuccessful.fxml"));
             Stage newStage = (Stage) (poSubmitButton.getScene().getWindow());
             newStage.setScene(new Scene(root, 700, 500));
@@ -218,6 +225,47 @@ public class SceneController
             poASURITE.setText("");
             poASURITE.setPromptText("PLEASE ENTER A VALID ID");
         }
+    }
+
+    public void Write(String ASURITE, String types, String toppings)
+    {
+        File log = new File("log.txt");
+        try{
+            if(log.exists()==false){
+                System.out.println("We had to make a new file.");
+                log.createNewFile();
+            }
+            PrintWriter out = new PrintWriter(new FileWriter(log, true));
+            out.append(ASURITE + " " + types +" " + toppings + "\n");
+            out.close();
+        }catch(IOException e){
+            System.out.println("COULD NOT LOG!!");
+        }
+
+        System.out.println(ASURITE + " " + types + " " + toppings);
+    }
+
+    public String getToppings()
+    {
+        String toppings = "";
+        if (mushroomButton.isSelected())
+        {
+            toppings = toppings +"Mushroom ";
+        }
+        if (oliveButton.isSelected())
+        {
+            toppings = toppings +"Olive ";
+        }
+        if (onionButton.isSelected())
+        {
+            toppings = toppings +"Onion ";
+        }
+        if (extraCheeseButton.isSelected())
+        {
+            toppings = toppings +"extraCheese ";
+        }
+
+        return toppings;
     }
 
     //Checks whether an input is Numeric

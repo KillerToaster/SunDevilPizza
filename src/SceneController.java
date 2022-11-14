@@ -60,9 +60,6 @@ public class SceneController
     @FXML
     Button ossReturnButton;
 
-    @FXML
-    Button oReturnHome;
-
     //OrderProcessingAgentView nodes
     @FXML
     VBox orderBox;
@@ -237,7 +234,7 @@ public class SceneController
     public void handlePOHome() throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
-        Stage newStage = (Stage) (oReturnHome.getScene().getWindow());
+        Stage newStage = (Stage) (ossReturnButton.getScene().getWindow());
         newStage.setScene(new Scene(root, 700, 500));
     }
 

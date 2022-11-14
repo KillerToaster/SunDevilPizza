@@ -30,6 +30,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+//import java.nio.file;
 
 public class SceneController
 {
@@ -123,6 +124,8 @@ public class SceneController
 
             //Here populate the ChefView scene with orders that the chef can mutate
             //if orderStatus = "ready to cook" or "Cooking" then the chef can change them
+            //populate view with their orders from the log.txt
+            //create an ArrayList of objects from log.txt
         }
         if (isNumeric(employeeID) && employeeID.charAt(0) == '2')//if id is type order processing agent
         {
@@ -131,6 +134,8 @@ public class SceneController
             newStage.setScene(new Scene(root, 600, 400));
 
             //here, populate the AgentView with all orders, because this agent has more control
+            //populate view with their orders from the log.txt
+            //create an ArrayList of objects from log.txt
 
         }
         else
@@ -176,7 +181,38 @@ public class SceneController
             Stage newStage = (Stage) (sSubmitButton.getScene().getWindow());
             newStage.setScene(new Scene(root, 600, 400));
 
-            //populate student view with their orders from the log.txt
+            TextArea orderTextArea = new TextArea("");
+            //add the order
+
+            //studentOrderBox.getChildren().add(orderTextArea); //throwing an error
+
+            //create a new arrayList
+            ArrayList<PizzaOrder> list = new ArrayList<PizzaOrder>();
+            //fill this array list with orders from log.txt
+            //create string with necessary text
+            String orderText = "";
+            for(int idx = 0; idx < list.size(); idx++)
+            {
+                if(list.get(idx).getID().equals("ASURITE"))
+                {
+                    orderText = orderText + list.get(idx).toString();
+                }
+            }
+            if(orderText.equals(""))
+            {
+                orderTextArea.setText("You Have No Current Orders");
+            }
+            else
+            {
+                orderTextArea.setText(orderText);
+            }
+
+            orderTextArea.setEditable(false);
+            orderTextArea.setPrefSize(300, 300);
+            ((BorderPane) root).setCenter(orderTextArea);
+
+            newStage.show();
+
         }
         else {
             sIDField.setStyle("-fx-text-box-border: #ff0000; -fx-focus-color: #ff0000;");
@@ -400,7 +436,7 @@ public class SceneController
     }
 
     //=======================================
-    //Handle StudentOrderView actions
+    //Other Methods
     //=======================================
 
     public void Write(String ASURITE, String types, String toppings)

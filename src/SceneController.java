@@ -224,9 +224,12 @@ public class SceneController
         //if the student id is not valid change the textfield red and change the prompt
         String ASURITE = poASURITE.getText();
 
-        if (ASURITE.length() == 10 && isNumeric(ASURITE)) {
-            ToggleButton selectedToggleButton =
-                    (ToggleButton) type.getSelectedToggle();
+        if (ASURITE.length() == 10 && isNumeric(ASURITE))
+        {
+            ToggleButton selectedToggleButton = (ToggleButton) type.getSelectedToggle();
+
+            //create a new PizzaOrder object
+            //add that pizza object to the list of objects in log.txt
 
             Write(ASURITE, selectedToggleButton.getText(), getToppings());
 
@@ -234,7 +237,8 @@ public class SceneController
             Stage newStage = (Stage) (poSubmitButton.getScene().getWindow());
             newStage.setScene(new Scene(root, 600, 400));
         }
-        else {
+        else
+        {
             poASURITE.setStyle("-fx-text-box-border: #ff0000; -fx-focus-color: #ff0000;");
             poASURITE.setText("");
             poASURITE.setPromptText("PLEASE ENTER A VALID ID");
@@ -356,13 +360,16 @@ public class SceneController
     //this button turns the selected orders from ready to cook into cooking
     public void handleCooking()
     {
-
+        //go through ArrayList and change fields of the selected orders
+        //all info should be saved back to log.txt each time
     }
 
     //this button changes the selected orders from cooking to ready
     public void handleReady()
     {
-
+        //go through array list and change selected orders from cooking to ready
+        //open a dialog box that says email sent to orders: [list of id numbers]
+        //all info should be saved back to log.txt each time
     }
 
     public void handleChefHome() throws Exception
@@ -393,7 +400,7 @@ public class SceneController
                 log.createNewFile();
             }
             PrintWriter out = new PrintWriter(new FileWriter(log, true));
-            out.append(ASURITE + " " + types +" " + toppings + "\n");
+            out.append(ASURITE + " " + types + " " + toppings + "\n");
             out.close();
         }catch(IOException e){
             System.out.println("COULD NOT LOG!!");

@@ -245,8 +245,6 @@ public class SceneController
         }catch(IOException e){
             System.out.println("COULD NOT LOG!!");
         }
-
-        System.out.println(ASURITE + " " + types + " " + toppings);
     }
 
     public String getToppings()
@@ -275,14 +273,14 @@ public class SceneController
     //Checks whether an input is Numeric
     public static boolean isNumeric(String string)
     {
-        int value;
+        float value;
 
         if(string == null || string.equals("")) {
             return false;
         }
 
         try {
-            value = Integer.parseInt(string);
+            value = Float.parseFloat(string);
             return true;
         } catch (NumberFormatException e) {
 

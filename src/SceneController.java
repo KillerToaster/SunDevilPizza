@@ -171,7 +171,6 @@ public class SceneController
     public void handleNewOrder() throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("OrderPizza.fxml"));
-
         Stage newStage = (Stage) (sIDField.getScene().getWindow());
         newStage.setScene(new Scene(root, 700, 500));
     }
@@ -180,7 +179,7 @@ public class SceneController
     {
         Parent root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
         Stage newStage2 = (Stage) (studentLoginHome.getScene().getWindow());
-        newStage2.setScene(new Scene(root, 600, 400));
+        newStage2.setScene(new Scene(root, 700, 500));
 
     }
 

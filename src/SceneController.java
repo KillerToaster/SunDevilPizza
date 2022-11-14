@@ -251,19 +251,31 @@ public class SceneController
         String toppings = "";
         if (mushroomButton.isSelected())
         {
-            toppings = toppings +"Mushroom ";
+            toppings = toppings +"true ";
+        } else
+        {
+            toppings = toppings +"false ";
         }
         if (oliveButton.isSelected())
         {
-            toppings = toppings +"Olive ";
+            toppings = toppings +"true ";
+        } else
+        {
+            toppings = toppings +"false ";
         }
         if (onionButton.isSelected())
         {
-            toppings = toppings +"Onion ";
+            toppings = toppings +"true ";
+        } else
+        {
+            toppings = toppings +"false ";
         }
         if (extraCheeseButton.isSelected())
         {
-            toppings = toppings +"extraCheese ";
+            toppings = toppings +"true ";
+        } else
+        {
+            toppings = toppings +"false ";
         }
 
         return toppings;
@@ -400,7 +412,7 @@ public class SceneController
                 log.createNewFile();
             }
             PrintWriter out = new PrintWriter(new FileWriter(log, true));
-            out.append(ASURITE + " " + types + " " + toppings + "\n");
+            out.append(ASURITE + " " + types + " " + toppings + "accepted" + "\n");
             out.close();
         }catch(IOException e){
             System.out.println("COULD NOT LOG!!");

@@ -126,6 +126,16 @@ public class SceneController
             //if orderStatus = "ready to cook" or "Cooking" then the chef can change them
             //populate view with their orders from the log.txt
             //create an ArrayList of objects from log.txt
+
+            //print out order text
+            TextArea orderTextArea = new TextArea("");
+
+            //create order list here
+
+            orderTextArea.setEditable(false);
+            orderTextArea.setPrefSize(300, 300);
+            ((BorderPane) root).setCenter(orderTextArea);
+
         }
         if (isNumeric(employeeID) && employeeID.charAt(0) == '2')//if id is type order processing agent
         {
@@ -136,6 +146,15 @@ public class SceneController
             //here, populate the AgentView with all orders, because this agent has more control
             //populate view with their orders from the log.txt
             //create an ArrayList of objects from log.txt
+
+            //print out order text
+            TextArea orderTextArea = new TextArea("");
+
+            //create order list here
+
+            orderTextArea.setEditable(false);
+            orderTextArea.setPrefSize(300, 300);
+            ((BorderPane) root).setCenter(orderTextArea);
 
         }
         else
@@ -199,7 +218,6 @@ public class SceneController
                 e.printStackTrace();
             }
 
-            //studentOrderBox.getChildren().add(orderTextArea); //throwing an error
 
             orderTextArea.setEditable(false);
             orderTextArea.setPrefSize(300, 300);
